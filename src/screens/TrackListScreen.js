@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 const TrackListScreen = ({ navigation }) => {
   return (

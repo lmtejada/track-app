@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { Button, Text } from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 import { StyleSheet } from 'react-native';
-import { Text, Button } from 'react-native-elements';
 
 import { Context as AuthContext } from '../context/AuthContext';
 import Spacer from '../components/Spacer';
