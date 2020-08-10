@@ -4,7 +4,7 @@ import { Context as LocationContext } from '../context/LocationContext';
 import MapView, { Circle, Polyline } from 'react-native-maps';
 
 const Map = () => {
-  const { state: { currentLocation } } = useContext(LocationContext);
+  const { state: { currentLocation, locations } } = useContext(LocationContext);
 
   if (!currentLocation) {
     return <ActivityIndicator size="large" style={{ marginTop: 200 }} />;
@@ -18,14 +18,14 @@ const Map = () => {
       longitudeDelta: 0.01
     }}
   >
-    {/* <Polyline
-      coordinates={points}
-    /> */}
     <Circle
       center={currentLocation.coords}
       radius={50}
       strokeColor="rgba(158, 158, 255, 1.0)"
       fillColor="rgba(158, 158, 255, 0.3)"
+    />
+    <Polyline
+      coordinates={locations.map(loc => loc.coords)}
     />
   </MapView>;
 };
