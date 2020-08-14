@@ -1,5 +1,6 @@
 import '../_mockLocation';
 import React, { useCallback, useContext } from 'react';
+import { FontAwesome } from '@expo/vector-icons';
 import { Text } from 'react-native-elements';
 import { SafeAreaView, withNavigationFocus } from 'react-navigation';
 import { StyleSheet } from 'react-native';
@@ -24,6 +25,11 @@ const TrackCreateScreen = ({ isFocused }) => {
       <TrackForm />
     </SafeAreaView>
   );
+};
+
+TrackCreateScreen.navigationOptions = {
+  title: 'Add Track',
+  tabBarIcon: <FontAwesome name="plus" size={20} />
 };
 
 const styles = StyleSheet.create({});
